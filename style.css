@@ -216,4 +216,60 @@ canvas:hover {
     background: #00c6ff;
     color: black;
 }
+/* Stack left + right for screens <= 1024px */
+@media (max-width: 1024px) {
+    main section {
+        flex-direction: column;
+    }
+
+    main section .left,
+    main section .right {
+        width: 100%;
+    }
+}
+/* Make canvas or preview auto resize */
+@media (max-width: 768px) {
+    main section .bottom {
+        max-height: 50vh;
+        aspect-ratio: auto;
+        padding: 10px;
+    }
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 600px) {
+    main section .right {
+        max-height: 50vh;
+        overflow-y: auto;
+        padding-right: 8px;
+    }
+}
+@media (max-width: 480px) {
+    main section .top {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    .presets {
+        justify-content: center;
+        gap: 8px;
+    }
+    .presets button {
+        flex: 1 1 40%;
+    }
+}
+img, canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+
 
